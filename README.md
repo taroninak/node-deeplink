@@ -1,6 +1,6 @@
 # node-deeplink [![Build Status](https://travis-ci.org/mderazon/node-deeplink.svg?branch=master)](https://travis-ci.org/mderazon/node-deeplink) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-> Easily create express endpoint to handle mobile deeplinks in your web server
+> Easily create koa (converted from express) endpoint to handle mobile deeplinks in your web server
 
 Takes away the pain of forwarding users to the right app store / mobile app depending on their platform.
 
@@ -27,10 +27,10 @@ Suppose you have a custom url scheme `app://` handled by your mobile apps. You w
 ### Example:
 
 ```js
-var express = require('express');
+var Koa = require('koa');
 var deeplink = require('node-deeplink');
 
-var app = express();
+var app = new Koa();
 
 app.get(
   '/deeplink',
